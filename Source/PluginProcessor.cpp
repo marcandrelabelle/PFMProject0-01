@@ -150,7 +150,7 @@ void Pfmproject001AudioProcessor::processBlock (AudioBuffer<float>& buffer, Midi
     // the samples and the outer loop is handling the channels.
     // Alternatively, you can process the samples with the channels
     // interleaved by keeping the same state.
-    Random r;
+    
     for( int i = 0; i < buffer.getNumSamples(); ++i)
     {
         for( int channel = 0; channel < buffer.getNumChannels(); ++channel )
