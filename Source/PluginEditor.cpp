@@ -22,6 +22,7 @@ Pfmproject001AudioProcessorEditor::Pfmproject001AudioProcessorEditor (Pfmproject
 
 Pfmproject001AudioProcessorEditor::~Pfmproject001AudioProcessorEditor()
 {
+    processor.shouldPlaySound = false;
 }
 
 //==============================================================================
@@ -39,4 +40,16 @@ void Pfmproject001AudioProcessorEditor::resized()
 {
     // This is generally where you'll want to lay out the positions of any
     // subcomponents in your editor..
+}
+
+void Pfmproject001AudioProcessorEditor::mouseUp(const MouseEvent &e)
+{
+    DBG( "mouseUp" );
+    processor.shouldPlaySound = !processor.shouldPlaySound;
+}
+
+void Pfmproject001AudioProcessorEditor::mouseDown(const MouseEvent &e)
+{
+    DBG( "mouseDown" );
+    //processor.shouldPlaySound = true;
 }
